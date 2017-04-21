@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+}
+
+
+.portfolio--thumb {
+    margin: 0 0 20px 0;
+}
+.portfolio--link{
+    display: block;
+    position: relative;
+    // max-width: 400px;
+    margin: 0 auto;
+}
+    .portfolio--link:hover .portfolio--caption {
+        opacity: 1;
+    }
+
+    .portfolio--caption {
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        transition: all 500ms;
+        background: rgba(51, 51, 51, 0.64);
+        width: 100%;
+        height: 100%;
+    }
+.portfolio--caption--content{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: #fff;
+}
+.portfolio--caption--content small{
+    display: block;
+}
