@@ -6,99 +6,104 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Open+Sans+Condensed:300,300i,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
 
-    <div class="header hidden-xs"></div>
-    <div class="portrait"></div>
-    <h1>Ron Largett Jr</h1>
-    <p>Welcome to my portfolio website.</p>
+<body>
 
-    <div class="portfolio container-fluid">
-    	<div class="row">
-            <div class="col-xs-12 col-md-6 portfolio--thumb">
-                <a href="#portfolioModal1" class="portfolio--link" data-toggle="modal">
-                    <div class="portfolio--caption"><div class="portfolio--caption--content">
-                        Digest of Homes <small>in progress</small>
-                    </div></div>
-                    <img src="img/digestofhomes.jpg" class="img-responsive">
-                </a>
-            </div>
-            <div class="col-xs-12 col-md-6 portfolio--thumb">
-                <a href="#portfolioModal2" class="portfolio--link" data-toggle="modal">
-                    <div class="portfolio--caption"><div class="portfolio--caption--content">
-                        Dylans RV <small>No Longer Live</small>
-                    </div></div>
-                    <img src="img/dylans.jpg" class="img-responsive">
-                </a>
-            </div>
-        	<div class="col-xs-12 col-md-6 portfolio--thumb">
-                <a href="#portfolioModal3" class="portfolio--link" data-toggle="modal">
-                    <div class="portfolio--caption"><div class="portfolio--caption--content">
-                        Deltona Realty at Winter Haven home <small>No Longer Live</small>
-                    </div></div>
-                    <img src="img/deltona-winter-haven.jpg" class="img-responsive">
-                </a>
-        	</div>
-        	<div class="col-xs-12 col-md-6 portfolio--thumb" data-toggle="modal">
-                <a href="#portfolioModal4" class="portfolio--link">
-                    <div class="portfolio--caption"><div class="portfolio--caption--content">
-                        Moneco Advisors <small>Live</small>
-                    </div></div>
-                    <img src="img/moneco.jpg" class="img-responsive">
-                </a>
-        	</div>
+<div class="wrapper">
+  <div class="header hidden-xs"></div>
+  <div class="portrait"></div>
+  <h1>Ron Largett Jr</h1>
+  <p>Welcome to my portfolio website.</p>
+  
+  <div class="portfolio container-fluid">
+    <div class="row">
+          <div class="col-xs-12 col-md-6 portfolio--thumb">
+              <a href="#portfolioModal1" class="portfolio--link" data-toggle="modal">
+                  <div class="portfolio--caption"><div class="portfolio--caption--content">
+                      Digest of Homes <small>in progress</small>
+                  </div></div>
+                  <img src="img/digestofhomes.jpg" class="img-responsive">
+              </a>
+          </div>
+          <div class="col-xs-12 col-md-6 portfolio--thumb">
+              <a href="#portfolioModal2" class="portfolio--link" data-toggle="modal">
+                  <div class="portfolio--caption"><div class="portfolio--caption--content">
+                      Dylans RV <small>No Longer Live</small>
+                  </div></div>
+                  <img src="img/dylans.jpg" class="img-responsive">
+              </a>
+          </div>
+        <div class="col-xs-12 col-md-6 portfolio--thumb">
+              <a href="#portfolioModal3" class="portfolio--link" data-toggle="modal">
+                  <div class="portfolio--caption"><div class="portfolio--caption--content">
+                      Deltona Realty at Winter Haven home <small>No Longer Live</small>
+                  </div></div>
+                  <img src="img/deltona-winter-haven.jpg" class="img-responsive">
+              </a>
         </div>
-    </div>
-
-    <!-- Contact -->
-    <div class="contact">
-      <div class="contact--form container">
-        <form action="https://formspree.io/ronlargett@gmail.com" method="post">
-          <input type="hidden" name="_subject" value="Message from portfolio site">
-          <input type="hidden" name="_next" value="./thanks.html" />
-          <input type="text" name="_gotcha" style="display:none" />
-          <div class="col-md-6"><label for="name">Name</label><input class="form-control" type="text" id="name" name="name" placeholder="Name"></div>
-          <div class="col-md-6"><label for="email">Email</label><input class="form-control" type="email" id="email" name="email" placeholder="Email"></div>
-          <div class="col-xs-12"><label for="message">Message</label><textarea class="form-control" name="message" id="message" rows="10" placeholder="Message"></textarea></div>
+        <div class="col-xs-12 col-md-6 portfolio--thumb" data-toggle="modal">
+              <a href="#portfolioModal4" class="portfolio--link">
+                  <div class="portfolio--caption"><div class="portfolio--caption--content">
+                      Moneco Advisors <small>Live</small>
+                  </div></div>
+                  <img src="img/moneco.jpg" class="img-responsive">
+              </a>
+        </div>
+      </div>
+  </div>
+</div>
+  
+  <!-- Contact -->
+  <div class="contact">
+    <div class="contact--form container">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/ronlargett@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="Message from portfolio site">
+        <input type="hidden" name="_next" value="./thanks.html" />
+        <input type="text" name="_gotcha" style="display:none" />
+        <div class="col-md-6 form-group"><input class="form-control" type="text" id="name" name="name" placeholder="Name"></div>
+        <div class="col-md-6 form-group"><input class="form-control" type="email" id="email" name="email" placeholder="Email"></div>
+        <div class="col-xs-12 form-group"><textarea class="form-control" name="message" id="message" rows="10" placeholder="Message"></textarea></div>
+        <div class="form-group">
           <input name="submit" type="submit" value="Submit" class="btn btn-primary">
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Digest of Homes</h4>
-          </div>
-          <div class="modal-body">
-            <img src="img/home-v02.1.jpg" class="img-responsive" alt="">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Digest of Homes</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/home-v02.1.jpg" class="img-responsive" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-
-    <div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Dylans RV</h4>
-          </div>
-          <div class="modal-body">
-            <img src="img/luxury-redesign-home-01.jpg" class="img-responsive" alt="">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+  </div>
+  
+  <div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Dylans RV</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/luxury-redesign-home-01.jpg" class="img-responsive" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
     <div class="modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -136,6 +141,21 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+      var biggestHeight = 0;
+      // Loop through elements children to find & set the biggest height
+      $(".contact *").each(function(){
+       // If this elements height is bigger than the biggestHeight
+       if ($(this).height() > biggestHeight ) {
+         // Set the biggestHeight to this Height
+         biggestHeight = $(this).height();
+       }
+      });
+
+      // Set the contact height
+      $(".contact").height(biggestHeight);
+    </script>
 
   </body>
 </html>
