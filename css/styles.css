@@ -72,6 +72,21 @@ h1 {
 
 .portfolio--thumb {
   margin: 0 0 20px 0;
+  opacity: 0;
+  transition: all 2s ease-out;
+  position: relative;
+}
+
+.portfolio--thumb:nth-of-type(even) {
+  -webkit-transform: translate(200px, 0px);
+  -ms-transform: translate(200px, 0px);
+  transform: translate(200px, 0px);
+}
+
+.portfolio--thumb:nth-of-type(odd) {
+  -webkit-transform: translate(-200px, 0px);
+  -ms-transform: translate(-200px, 0px);
+  transform: translate(-200px, 0px);
 }
 
 .portfolio--link {
@@ -103,6 +118,13 @@ h1 {
 
 .portfolio--caption--content h3 {
   margin: 0;
+}
+
+.in-view {
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px) !important;
+  -ms-transform: translate(0px, 0px) !important;
+  transform: translate(0px, 0px) !important;
 }
 
 .contact {

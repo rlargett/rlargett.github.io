@@ -51,8 +51,8 @@
                         <img src="img/deltona-winter-haven.jpg" class="img-responsive">
                     </a>
                 </div>
-                <div class="col-xs-12 col-md-6 portfolio--thumb" data-toggle="modal">
-                    <a href="#portfolioMoneco" class="portfolio--link">
+                <div class="col-xs-12 col-md-6 portfolio--thumb">
+                    <a href="#portfolioMoneco" class="portfolio--link" data-toggle="modal">
                         <div class="portfolio--caption">
                             <div class="portfolio--caption--content">
                                 <h3>Moneco Advisors</h3>
@@ -167,7 +167,7 @@
                     <h3 class="modal-title" id="myModalLabel">Moneco Advisors</h3>
                 </div>
                 <div class="modal-body">
-                    <img src="img/moneco-homepage.jpg" class="img-responsive" alt="">
+                    <img src="img/moneco-homepage.jpeg" class="img-responsive" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -187,9 +187,36 @@
             biggestHeight = $(this).height();
         }
     });
-
     // Set the contact height
     $(".contact").height(biggestHeight);
+
+    // Slide in on Scroll
+    var $animation_elements = $('.portfolio--thumb');
+    var $window = $(window);
+
+    function check_if_in_view() {
+      var window_height = $window.height();
+      var window_top_position = $window.scrollTop();
+      var window_bottom_position = (window_top_position + window_height);
+
+      $.each($animation_elements, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+
+        //check to see if this current container is within viewport
+        if ((element_bottom_position >= window_top_position) &&
+          (element_top_position <= window_bottom_position)) {
+          $element.addClass('in-view');
+        } else {
+          $element.removeClass('in-view');
+        }
+      });
+    }
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
     </script>
 </body>
 

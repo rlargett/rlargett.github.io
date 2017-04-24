@@ -58,6 +58,15 @@ h1{
 }
 .portfolio--thumb {
     margin: 0 0 20px 0;
+    opacity: 0;
+    transition: all 2s ease-out;
+    position: relative;
+    &:nth-of-type(even){
+        transform: translate(200px, 0px);
+    }
+    &:nth-of-type(odd){
+        transform: translate(-200px, 0px);
+    }
 }
 .portfolio--link{
     display: block;
@@ -86,6 +95,11 @@ h1{
 }
 .portfolio--caption--content h3{
     margin: 0;
+}
+
+.in-view{
+    opacity: 1;
+    transform: translate(0px, 0px) !important;
 }
 
 .contact{
