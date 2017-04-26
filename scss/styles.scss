@@ -7,7 +7,7 @@ body{
 h1{
     font-family: 'Cinzel', serif;
     margin-top: 0;
-    font-size: 20vw;
+    font-size: 10vw;
     @media all and (min-width: 480px) {
         font-size: 4.375em;
     }
@@ -44,8 +44,8 @@ h1{
     background-color: #333;
     background-image: url('../img/ron-largett-jr.jpg');
     background-repeat: no-repeat;
-    background-position:  -125px -30px;
-    background-size: 400px;
+    background-position:  -100px -30px;
+    background-size: 500px;
     @media all and (min-width: 480px) {
         margin-top: -100px;
         box-shadow: 0 -1px 1px #888;
