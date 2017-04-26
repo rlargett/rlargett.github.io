@@ -68,12 +68,13 @@ h1 {
 
 .portfolio {
   border-bottom: 1px solid #aaa;
+  overflow: hidden;
 }
 
 .portfolio--thumb {
   margin: 0 0 20px 0;
   opacity: 0;
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   position: relative;
 }
 
