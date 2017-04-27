@@ -53,6 +53,45 @@ h1{
         background-size: 600px;
     }
 }
+
+.experience {
+    background-color: #ddd;
+    position: relative;
+}
+
+.experience:after {content: '';border-left: 1px solid #ffffff;position: absolute;right: 50%;width: 1px;height: 100%;top: 0;bottom: 0;margin: auto;display: block;}
+
+.experience--wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    height: 300px;
+}
+
+.experience--wrapper >
+ div {
+    width: 35%;
+}
+
+.experience--wrapper >
+ div:nth-child(1) {
+    order: 1;
+}
+
+.experience--wrapper >
+ div:nth-child(2) {
+    order: 3;
+}
+
+.experience--wrapper >
+ div:nth-child(3) {
+    order: 2;
+}
+
+.experience--wrapper div .head {
+    background-color: #0000ff;
+}
+
+
 .portfolio{
     border-bottom: 1px solid #aaa;
     overflow: hidden;
