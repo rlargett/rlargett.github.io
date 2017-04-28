@@ -261,7 +261,7 @@
       });
     }
 
-    $window.on('scroll resize', check_if_in_view);
+    $window.on('scroll resize load', check_if_in_view);
     $window.trigger('scroll');
 
     // Open Experience Section
@@ -272,8 +272,10 @@
       $(this).next().slideToggle(400, function(){
         if ($(this).is(':visible')){
             link.text('Hide Experience');
+            // check_if_in_view();
         } else {
             link.text('View Experience');
+            $(window).scrollTop($(window).scrollTop()+1);
         }
       });
       //$(this).toggleClass('active');
