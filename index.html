@@ -18,6 +18,52 @@
         <h1>Ron Largett Jr</h1>
         <!-- <p><a href="./pdf/resume.pdf" class="btn btn-primary" target="_blank">My Resume</a></p> -->
         <p>Welcome to my portfolio website.</p>
+        <div class="experience">
+            <h2>My Experience</h2>
+            <div class="experience--bg container-fluid">
+                <div class="experience--wrapper">
+                    <div class="experience--card">
+                        <div class="head">
+                            <h3>Platinum Strategies<small>03/2015 - current</small></h3>
+                        </div>
+                        <div class="body">
+                            <h4>Senior Web Designer</h4>
+                            <ul>
+                                <li>Design and code multiple financial advisor's websites</li>
+                                <li>Troubleshoot and rework design workflow</li>
+                                <li>Create and organize reusable code snippets</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience--card">
+                        <div class="head">
+                            <h3>NetSource Technologies<small>07/2012 - 03/2015</small></h3>
+                        </div>
+                        <div class="body">
+                            <h4>Web Designer</h4>
+                            <ul>
+                                <li>Design, code, and manage multiple client websites</li>
+                                <li>Design client banners, brochures, flyers, and logos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience--card">
+                        <div class="head">
+                            <h3>Maranatha Fellowship Church<small>11/2003 - 07/2012</small></h3>
+                        </div>
+                        <div class="body">
+                            <h4>Graphic and Web Designer</h4>
+                            <ul>
+                                <li>Design, code and manage multiple church websites</li>
+                                <li>Design ministry banners, brochures, flyers and logos</li>
+                                <li>Edit and upload audio files for weekly podcast</li>
+                                <li>Record staff training videos for website maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="portfolio container-fluid">
             <h2>My Portfolio</h2>
             <div class="row">
@@ -191,7 +237,7 @@
     $(".contact").height(biggestHeight);
 
     // Slide in on Scroll
-    var $animation_elements = $('.portfolio--thumb');
+    var $animation_elements = $('.portfolio--thumb, .experience--card');
     var $window = $(window);
 
     function check_if_in_view() {
@@ -215,8 +261,27 @@
       });
     }
 
-    $window.on('scroll resize', check_if_in_view);
+    $window.on('scroll resize load', check_if_in_view);
     $window.trigger('scroll');
+
+    // Open Experience Section
+    $('.experience--bg').hide();
+    $('.experience h2').text('View Experience').addClass('link');
+    $('.experience h2').on('click', function(){
+        var link = $(this);
+      $(this).next().slideToggle(400, function(){
+        if ($(this).is(':visible')){
+            link.text('Hide Experience');
+            // check_if_in_view();
+        } else {
+            link.text('View Experience');
+            $(window).scrollTop($(window).scrollTop()+1);
+        }
+      });
+      //$(this).toggleClass('active');
+      //$(this).text('Projects Viewed');
+    });
+
     </script>
 </body>
 
