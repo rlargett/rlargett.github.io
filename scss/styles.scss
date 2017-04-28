@@ -62,7 +62,11 @@ h1{
 }
 
 .experience {
+}
+
+.experience--bg{
     position: relative;
+    background-color: $experienceBGColor;
     &:after {
         content: '';
         border-left: 1px solid #ffffff;
@@ -75,10 +79,6 @@ h1{
         margin: auto;
         display: block;
     }
-}
-
-.experience--bg{
-    background-color: $experienceBGColor;
 }
 
 .experience--wrapper {
@@ -99,6 +99,8 @@ h1{
     width: 100%;
     padding: 50px 55px;
     z-index: 2;
+    transition: all 1s ease-out;
+    transform: translate(0px, 200px);
     @media all and (max-width: 767px){
         ul{
             list-style-type: none;
@@ -258,6 +260,9 @@ h1{
 .in-view{
     opacity: 1;
     transform: translate(0px, 0px) !important;
+}
+.link{
+    cursor: pointer;
 }
 
 .contact{

@@ -66,11 +66,12 @@ h1 {
   }
 }
 
-.experience {
+.experience--bg {
   position: relative;
+  background-color: #ccc;
 }
 
-.experience:after {
+.experience--bg:after {
   content: '';
   border-left: 1px solid #ffffff;
   position: absolute;
@@ -81,10 +82,6 @@ h1 {
   bottom: 0;
   margin: auto;
   display: block;
-}
-
-.experience--bg {
-  background-color: #ccc;
 }
 
 .experience--wrapper {
@@ -117,6 +114,10 @@ h1 {
   width: 100%;
   padding: 50px 55px;
   z-index: 2;
+  transition: all 1s ease-out;
+  -webkit-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate(0px, 200px);
 }
 
 @media all and (max-width: 767px) {
@@ -293,6 +294,10 @@ h1 {
   -webkit-transform: translate(0px, 0px) !important;
   -ms-transform: translate(0px, 0px) !important;
   transform: translate(0px, 0px) !important;
+}
+
+.link {
+  cursor: pointer;
 }
 
 .contact {

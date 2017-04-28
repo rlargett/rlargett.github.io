@@ -237,7 +237,7 @@
     $(".contact").height(biggestHeight);
 
     // Slide in on Scroll
-    var $animation_elements = $('.portfolio--thumb');
+    var $animation_elements = $('.portfolio--thumb, .experience--card');
     var $window = $(window);
 
     function check_if_in_view() {
@@ -263,6 +263,23 @@
 
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
+
+    // Open Experience Section
+    $('.experience--bg').hide();
+    $('.experience h2').text('View Experience').addClass('link');
+    $('.experience h2').on('click', function(){
+        var link = $(this);
+      $(this).next().slideToggle(400, function(){
+        if ($(this).is(':visible')){
+            link.text('Hide Experience');
+        } else {
+            link.text('View Experience');
+        }
+      });
+      //$(this).toggleClass('active');
+      //$(this).text('Projects Viewed');
+    });
+
     </script>
 </body>
 
