@@ -66,6 +66,17 @@ h1 {
   }
 }
 
+.experience {
+  position: relative;
+  background-color: #bd1029;
+  margin-bottom: 50px;
+}
+
+.experience h2 {
+  padding: 10px 0 30px;
+  color: #fff;
+}
+
 .experience--bg {
   position: relative;
   background-color: #ccc;
@@ -170,16 +181,6 @@ h1 {
     z-index: 10;
     transition: all 0.5s;
   }
-  .experience--wrapper .experience--card .head .experience--wrapper .experience--card:hover .head:after {
-    background: #bd1029;
-    border: 2px solid #bd1029;
-  }
-  .experience--wrapper .experience--card .head .experience--wrapper .experience--card:nth-child(odd) .head:after {
-    right: -61px;
-  }
-  .experience--wrapper .experience--card .head .experience--wrapper .experience--card:nth-child(even) .head:after {
-    left: -62px;
-  }
 }
 
 @media all and (min-width: 768px) {
@@ -232,6 +233,41 @@ h1 {
 .experience--wrapper .experience--card .body {
   background: #aaa;
   padding: 15px;
+}
+
+.experience--button {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  display: inline-block;
+  bottom: -20px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  padding: 5px;
+  border: 2px solid #bd1029;
+  border-radius: 50%;
+  color: #bd1029;
+  cursor: pointer;
+  line-height: 1.5;
+  transition: all 0.25s;
+}
+
+.experience--button.open {
+  background: #bd1029;
+  color: #fff;
+  border-color: #fff;
+}
+
+.experience--button:hover {
+  background-color: #bd1029;
+  color: white;
+  border-color: white;
+}
+
+.experience--button.open:hover {
+  border-color: #bd1029;
 }
 
 .portfolio {
