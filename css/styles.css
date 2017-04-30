@@ -326,6 +326,28 @@ h1 {
   margin: 0;
 }
 
+.project--details p {
+  margin: 0;
+}
+
+.modal-body h3 {
+  margin: 50px 0;
+}
+
+.modal-body h3:after {
+  content: '';
+  border-bottom: 1px solid #ccc;
+  height: 1px;
+  width: 100%;
+  display: block;
+  margin-top: -12px;
+}
+
+.modal-body h3 span {
+  background: #fff;
+  padding: 5px;
+}
+
 .in-view {
   opacity: 1;
   -webkit-transform: translate(0px, 0px) !important;
