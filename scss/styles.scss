@@ -62,6 +62,14 @@ h1{
 }
 
 .experience {
+    position: relative;
+    background-color: $primaryColor;
+    margin-bottom: 50px;
+}
+
+.experience h2 {
+    padding: 10px 0 30px;
+    color: #fff;
 }
 
 .experience--bg{
@@ -143,17 +151,6 @@ h1{
             z-index: 10;
             transition: all 0.5s;
         }
-        .experience--wrapper .experience--card:hover .head:after{
-            background: $primaryColor;
-            border: 2px solid $primaryColor;
-        }
-
-        .experience--wrapper .experience--card:nth-child(odd) .head:after {
-            right: -61px;
-        }
-        .experience--wrapper .experience--card:nth-child(even) .head:after {
-            left: -62px;
-        }
     }
 }
 
@@ -209,6 +206,41 @@ h1{
 .experience--wrapper .experience--card .body {
     background: #aaa;
     padding: 15px;
+}
+
+.experience--button {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    display: inline-block;
+    bottom: -20px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    padding: 5px;
+    border: 2px solid $primaryColor;
+    border-radius: 50%;
+    color: $primaryColor;
+    cursor: pointer;
+    line-height: 1.5;
+    transition: all 0.25s;
+}
+
+.experience--button.open {
+    background: $primaryColor;
+    color: #fff;
+    border-color: #fff;
+}
+
+.experience--button:hover {
+    background-color: $primaryColor;
+    color: white;
+    border-color: white;
+}
+
+.experience--button.open:hover {
+    border-color: $primaryColor;
 }
 
 
