@@ -266,12 +266,12 @@
 
     // Open Experience Section
     $('.experience--bg').hide();
-    $('.experience h2').text('View Experience').addClass('link');
+    $('.experience h2').text('View My Experience').addClass('link');
     $('.experience h2').on('click', function(){
         var link = $(this);
       $(this).next().slideToggle(400, function(){
         if ($(this).is(':visible')){
-            link.text('Hide Experience');
+            link.text('Hide My Experience');
             // check_if_in_view();
         } else {
             link.text('View Experience');
