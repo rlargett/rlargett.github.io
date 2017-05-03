@@ -36,6 +36,14 @@ h1 small {
   z-index: 5;
 }
 
+header {
+  /** fix height for mobile devices that don't like the vh height measurement **/
+  /** iPad with portrait orientation. **/
+  /** iPad with landscape orientation. **/
+  /** iPhone 7/6 Plus with landscape orientation. **/
+  /** iPhone 7/6 with landscape orientation. **/
+}
+
 @media all and (min-width: 480px) {
   header {
     background: url(../img/ron-largett-jr.jpg) no-repeat center;
@@ -49,7 +57,41 @@ h1 small {
   }
 }
 
-@media all and (max-width: 992px) and (min-width: 480px) {
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  header {
+    height: 1024px;
+  }
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  header {
+    height: 768px;
+  }
+}
+
+@media all and (device-width: 736) and (device-height: 414) and (orientation: landscape) {
+  header {
+    height: 414px;
+    width: auto;
+    background-attachment: scroll;
+    background-size: contain;
+  }
+}
+
+@media all and (device-width: 667) and (device-height: 375) and (orientation: landscape) {
+  header {
+    height: 375px;
+  }
+}
+
+@media all and (max-width: 768px) and (min-width: 480px) {
+  header .welcome {
+    margin-top: 30px;
+    display: inline-block;
+  }
+}
+
+@media all and (max-width: 992px) and (min-width: 768px) {
   header .welcome {
     position: absolute;
     top: 50%;
