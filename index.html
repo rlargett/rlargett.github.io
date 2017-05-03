@@ -302,6 +302,15 @@
     $window.on('scroll resize load', check_if_in_view);
     $window.trigger('scroll');
 
+    //ANIMATE DOWN ARROW IN HERO
+    $('a[href="#experience"]').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#experience').offset().top
+        }, 'slow');
+        return false;
+    });
+
+
     // Open Experience Section
     $('.experience--bg').hide();
     $('<span class="experience--button">Open</span>').insertAfter('.experience--bg');
