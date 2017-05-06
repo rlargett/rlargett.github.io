@@ -14,8 +14,8 @@
 
 <body>
     <div class="wrapper">
-        <header>
-            <div class="col-md-6 col-md-offset-6 welcome">
+        <header id="scene" data-pointer-events="true">
+            <div class="col-md-6 col-md-offset-6 welcome layer" data-depth="0.00">
                 <div class="portrait"></div>
                 <h1><small>My name is</small>Ron Largett Jr</h1>
                 <hr>
@@ -23,6 +23,7 @@
                 <p><a href="./pdf/resume.pdf" class="btn btn-primary" target="_blank">Download My Resume</a></p>
                 <p><a href="#experience" title="See More"><i class="fa fa-chevron-down"></i></a></p>
             </div>
+            <div class="layer" data-depth="0.10"><div class="sceneBg"></div></div>
         </header>
         <div class="experience" id="experience">
             <h2>My Experience</h2>
@@ -261,6 +262,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./js/parallax.min.js"></script>
     <script>
     var biggestHeight = 0;
     // Loop through elements children to find & set the biggest height
@@ -328,6 +330,9 @@
       $(this).toggleClass('open');
       //$(this).text('Projects Viewed');
     });
+
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
 
     </script>
 </body>
