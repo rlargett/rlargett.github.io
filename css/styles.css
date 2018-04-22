@@ -210,10 +210,11 @@ header .welcome .scrollDown {
 }
 
 .experience--wrapper {
-  display: -webkit-flex;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -ms-flex-flow: column;
   flex-flow: column;
   max-width: 960px;
@@ -223,7 +224,8 @@ header .welcome .scrollDown {
 @media all and (min-width: 768px) {
   .experience--wrapper {
     height: 900px;
-    -webkit-flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
   }
@@ -239,6 +241,8 @@ header .welcome .scrollDown {
   width: 100%;
   padding: 50px 55px;
   z-index: 2;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
   -webkit-transform: translate(0px, 200px);
   -ms-transform: translate(0px, 200px);
@@ -258,20 +262,26 @@ header .welcome .scrollDown {
     width: 50%;
   }
   .experience--wrapper .experience--card:nth-child(1) {
-    -webkit-order: 1;
+    -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
   }
   .experience--wrapper .experience--card:nth-child(2) {
-    -webkit-order: 3;
+    -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
     margin-top: 150px;
   }
   .experience--wrapper .experience--card:nth-child(3) {
-    -webkit-order: 2;
+    -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
+    margin-top: 50px;
+  }
+  .experience--wrapper .experience--card:nth-child(4) {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
     margin-top: 50px;
   }
 }
@@ -293,6 +303,8 @@ header .welcome .scrollDown {
     position: absolute;
     top: 30px;
     z-index: 10;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
   }
 }
@@ -365,6 +377,8 @@ header .welcome .scrollDown {
   color: #9e0d22;
   cursor: pointer;
   line-height: 1.5;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
   transition: all 0.25s;
 }
 
@@ -393,6 +407,8 @@ header .welcome .scrollDown {
 .portfolio--thumb {
   margin: 0 0 20px 0;
   opacity: 0;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
   position: relative;
 }
@@ -423,6 +439,8 @@ header .welcome .scrollDown {
   position: absolute;
   z-index: 1;
   opacity: 0;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
   transition: all 500ms;
   background: rgba(51, 51, 51, 0.64);
   width: 100%;
